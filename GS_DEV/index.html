@@ -56,8 +56,8 @@
                             <div>
                                 <div id="sr-dest-block" class="green-text"><a rel="tooltip" title="dummy text">Destination</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-destination">
-                                    <li><input type="radio" id="check-1" name="dest"  >Internal</li>
-                                    <li><input type="radio"  id="check-2" name="dest">External</li>
+                                    <li><input type="radio" id="check-1" name="dest" value="Internal" >Internal</li>
+                                    <li><input type="radio"  id="check-2" name="dest" value="External" >External</li>
                                 </ul> 
 
                             </div>  
@@ -67,8 +67,8 @@
                             <div>
                                 <div id="sr-frequency-block" class="green-text"><a rel="tooltip" title="dummy text">Frequency</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-frequency">
-                                    <li><input type="radio" name="radFrequency">One Time(Ad-hoc)</li>
-                                    <li><input type="radio" name="radFrequency">Regularly</li>
+                                    <li><input type="radio" name="radFrequency" value="One time">One Time(Ad-hoc)</li>
+                                    <li><input type="radio" name="radFrequency" value="Regularly">Regularly</li>
                                 </ul> 
                             </div>  
                             <!-- Frequency Ends-->
@@ -78,10 +78,10 @@
                             <div>
                                 <div id="sr-recipient-block" class="green-text"><a rel="tooltip" title="dummy text">Recipient</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-recipient">
-                                    <li><input type="radio"  name="radRecp" >One recipient constantly</li>
-                                    <li><input type="radio"  name="radRecp">Manually change recipient</li>
-                                    <li><input type="radio"  name="radRecp">Multiple recipient in different domain</li>
-                                    <li><input type="radio"  name="radRecp">Programmatic recipient</li>
+                                    <li><input type="radio"  name="radRecp" value="One recipient constantly" >One recipient constantly</li>
+                                    <li><input type="radio"  name="radRecp" value="Manually change recipients">Manually change recipient</li>
+                                    <li><input type="radio"  name="radRecp" value="Multiple recipients in different domains"> Multiple recipient in different domain</li>
+                                    <li><input type="radio"  name="radRecp" value="Programmatic recipients">Programmatic recipient</li>
                                 </ul> 
 
                             </div>
@@ -103,9 +103,9 @@
                             <div>
                                 <div id="sr-datatype-block" class="green-text"><a rel="tooltip" title="dummy text">Data Type</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-datatype">
-                                    <li><input type="radio" name="radDataType">Email</li>
-                                    <li><input type="radio" name="radDataType">Document</li>
-                                    <li><input type="radio" name="radDataType">Custom content</li>
+                                    <li><input type="radio" name="radDataType" value="Email content withouth attachment">Email</li>
+                                    <li><input type="radio" name="radDataType" value="Documents">Document</li>
+                                    <li><input type="radio" name="radDataType" value="Custom Content">Custom content</li>
                                 </ul> 
 
                             </div>  
@@ -116,10 +116,10 @@
                             <div>
                                 <div class="green-text"><a rel="tooltip" title="dummy text">Special Requirements</a><span class="blackText"> (select all that apply)</span></div>
                                 <ul id="">
-                                    <li><input type="checkbox" name="special">Cannot be redistributed or forwarded</li>
-                                    <li><input type="checkbox" name="special">Cannot be redistributed or forwarded</li>
+                                    <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded ">Cannot be redistributed or forwarded</li>
+                                    <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded (For internal only)">Cannot be redistributed or forwarded</li>
                                     <!--   <li><input type="checkbox" />If email,attachment is required</li> -->
-                                    <li><input type="checkbox" name="special">Large amount of data FTP is required</li>
+                                    <li><input type="checkbox" name="special" value="Large volume of data, FTP required">Large amount of data FTP is required</li>
                                 </ul> 
 
                             </div>  
