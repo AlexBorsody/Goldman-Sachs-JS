@@ -148,12 +148,13 @@
                        })
                         $("#send-receive-recipient input[name=radRecp]").each(function(){
                        if($(this).is(":checked")){
-                          selectedAnswers["206738"]=$(this).val();
+                          
+                            selectedAnswers["206739"]=$(this).val();
                        }
                        })
                         $("#send-receive-frequency input[name=radFrequency]").each(function(){
                        if($(this).is(":checked")){
-                          selectedAnswers["206739"]=$(this).val();
+                        selectedAnswers["206738"]=$(this).val();
                        }
                        })
                         $("#send-receive-datatype input[name=radDataType]").each(function(){
@@ -169,21 +170,26 @@
                        }
                        })
             
-           document.write( selectedAnswers["206736"]+"="+
+            /*  document.write( selectedAnswers["206736"]+"="+
                         selectedAnswers["206738"]+"="+
                         selectedAnswers["206739"]+"="+
                         selectedAnswers["206838"]+"="+
                         selectedAnswers["207423"])
-           /*      // alert((jObj['links'][6]['selections']["206739"]))       
+              // alert((jObj['links'][6]['selections']["206739"]))       
                      // alert((jObj['links'].length))  */
                       for(j=0;j<=10;j++){
-        // document.write(jObj['links'][j]['selections']['206736']+"=="+selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']+"=="+selectedAnswers["206738"]&&jObj['links'][j]['selections']['206739']+"=="+selectedAnswers["206739"]&& jObj['links'][j]['selections']['206838']+"=="+selectedAnswers["206838"]&&jObj['links'][j]['selections']['207423']+"=="+selectedAnswers["207423"]);
+                          
+       /*  document.write(jObj['links'][j]['selections']['206736']+"=="+selectedAnswers["206736"]+"&&"+
+             jObj['links'][j]['selections']['206738']+"=="+selectedAnswers["206738"]+"&&"+
+           jObj['links'][j]['selections']['206739']+"=="+selectedAnswers["206739"]+"&&"+
+             jObj['links'][j]['selections']['206838']+"=="+selectedAnswers["206838"]+"&&"+
+             jObj['links'][j]['selections']['207423']+"=="+selectedAnswers["207423"]+"<br/>"); */
                  if( jObj['links'][j]['selections']['206736']==selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']==selectedAnswers["206738"]&&jObj['links'][j]['selections']['206739']==selectedAnswers["206739"]&& jObj['links'][j]['selections']['206838']==selectedAnswers["206838"]&&    
      jObj['links'][j]['selections']['207423']==selectedAnswers["207423"])  {
      
      alert("Matched Found:"+jObj['links'][j]['text']);
      }else{
-         alert("Not Matched")
+        // alert("Not Matched")
      } 
                           
                       }
