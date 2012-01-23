@@ -175,9 +175,9 @@
                         selectedAnswers["206739"]+"="+
                         selectedAnswers["206838"]+"="+
                         selectedAnswers["207423"])
-              // alert((jObj['links'][6]['selections']["206739"]))       
-                     // alert((jObj['links'].length))  */
-                      for(j=0;j<=10;j++){
+              // alert((jObj['links'][6]['selections']["206739"]))    */   
+                    
+                      for(j=0;j<=jObj['links'].length;j++){
                           
        /*  document.write(jObj['links'][j]['selections']['206736']+"=="+selectedAnswers["206736"]+"&&"+
              jObj['links'][j]['selections']['206738']+"=="+selectedAnswers["206738"]+"&&"+
