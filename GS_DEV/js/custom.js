@@ -194,10 +194,6 @@
                           
                       }
                       
-                      
-            
-                       // alert(selectedAnswers["206838"]);
-                        
                         $(this).val('Update Requirements');
 		 
                         //answer demonstration: fade in mock answer if questions selected
@@ -275,7 +271,7 @@
         /* Collabrate  Form Validation   */
       
         $("#collaborate-submit").click(function(){
-           // If selected  update the button 
+           // If selected , update the button 
             if($("#coll-media-type-ul input[name=radCollDest]").is(':checked')){
                 $("#coll-mediatype").addClass('green-text');
                 $("#coll-mediatype").removeClass('red-text');
