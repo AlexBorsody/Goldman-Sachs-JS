@@ -1,7 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
-
         <link rel="stylesheet"  href="css/style.css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
@@ -35,7 +34,7 @@
 
                         <!-- Media Type Starts  -->
                         <div class="light-bf">
-                            <div id="sr-mediatype" class="green-text">Select your media type<span> (select one)*</span></div>
+                            <div id="sr-mediatype" class="green-text"><a rel="tooltip" title="dummy text">Select your media type</a><span class="blackText"> (select one)*</span></div>
                             <ul id="sr-media-type-ul">
                                 <li><input type="radio" name="radMediaType" value="electronic" id="mediaType1" >Electronic</li>
                                 <li><input type="radio" name="radMediaType" value="non-electronic" id="mediaType2" >Non Electronic</li>
@@ -55,7 +54,7 @@
 
                             <!-- Destination Starts -->
                             <div>
-                                <div id="sr-dest-block" class="green-text">Destination<span> (select one)*</span></div>
+                                <div id="sr-dest-block" class="green-text"><a rel="tooltip" title="dummy text">Destination</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-destination">
                                     <li><input type="radio" id="check-1" name="dest" >Internal</li>
                                     <li><input type="radio"  id="check-2" name="dest">External</li>
@@ -66,7 +65,7 @@
 
                             <!-- Frequency Starts -->
                             <div>
-                                <div id="sr-frequency-block" class="green-text">Frequency<span> (select one)*</span></div>
+                                <div id="sr-frequency-block" class="green-text"><a rel="tooltip" title="dummy text">Frequency</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-frequency">
                                     <li><input type="radio" name="radFrequency">One Time(Ad-hoc)</li>
                                     <li><input type="radio" name="radFrequency">Regularly</li>
@@ -77,7 +76,7 @@
                             <!-- Recipient Starts -->
 
                             <div>
-                                <div id="sr-recipient-block" class="green-text">Recipient<span> (select one)*</span></div>
+                                <div id="sr-recipient-block" class="green-text"><a rel="tooltip" title="dummy text">Recipient</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-recipient">
                                     <li><input type="radio"  name="radRecp" >One recipient constantly</li>
                                     <li><input type="radio"  name="radRecp">Manually change recipient</li>
@@ -102,7 +101,7 @@
 
                             <!-- Data type selection Starts  -->
                             <div>
-                                <div id="sr-datatype-block" class="green-text">Data Type<span> (select one)*</span></div>
+                                <div id="sr-datatype-block" class="green-text"><a rel="tooltip" title="dummy text">Data Type</a><span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-datatype">
                                     <li><input type="radio" name="radDataType">Email</li>
                                     <li><input type="radio" name="radDataType">Document</li>
@@ -115,7 +114,7 @@
                             <!--Special Requirement Starts -->
 
                             <div>
-                                <div class="green-text">Special Requirements<span> (select all that apply)</span></div>
+                                <div class="green-text"><a rel="tooltip" title="dummy text">Special Requirements</a><span class="blackText"> (select all that apply)</span></div>
                                 <ul id="">
                                     <li><input type="checkbox" name="radio5">Cannot be redistributed or forwarded</li>
                                     <li><input type="checkbox" name="radio5">Cannot be redistributed or forwarded</li>
@@ -145,11 +144,11 @@
 
                         </div>-->
                         <div id="answer">
-		    <div id="blackText">&nbsp; &nbsp; Based on your selections we suggest using</div>
+		    <div class="blackText">&nbsp; &nbsp; Based on your selections we suggest using</div>
 			<ul>
 				<li><span id="bigAnswer">Secure Zone</span></li>
-				<li><span id="smallAnswer">SEFT</span></li>
-				<li><span id="smallAnswer">Adobe LifeCycle</span></li></ul>
+				<li><span class="smallAnswer">SEFT</span></li>
+				<li><span class="smallAnswer">Adobe LiveCycle</span></li></ul>
 		   </div>
 		   
                         <div class="button-block"> 
@@ -168,7 +167,7 @@
 
                         <!--Destination Starts-->
                         <div class="light-bf">
-                            <div id="coll-mediatype" class="green-text">Destination<span> (select)*</span></div>
+                            <div id="coll-mediatype" class="green-text">Destination<span class="blackText"> (select)*</span></div>
                             <ul id="coll-media-type-ul">
                                 <li><input type="radio" id="check-1" name="radCollDest" >Internal</li>
                                 <li><input type="radio"  id="check-2" name="radCollDest" >External</li>
@@ -195,7 +194,7 @@
 
                         <!-- Media Type Starts  -->
                         <div class="light-bf">
-                            <div id="arch-mediatype" class="green-text">Select your media type<span> (select one)*</span></div>
+                            <div id="arch-mediatype" class="green-text">Select your media type<span class="blackText"> (select one)*</span></div>
                             <ul id="archMedia-type">
                                 <li><input type="radio" name="radArchMediaType" value="electronic" id="archMediaType1" />Electronic</li>
                                 <li><input type="radio" name="radArchMediaType" value="non-electronic" id="archMediaType2" />Non Electronic</li>
@@ -208,7 +207,7 @@
 
                         <!-- Hidden form to shown Destination Radio Buttons --> 
                         <div id="archDest">
-                            <div id="arch-dest-block" class="green-text">Destination<span> (select one)*</span></div>
+                            <div id="arch-dest-block" class="green-text">Destination<span class="blackText"> (select one)*</span></div>
                             <ul id="arch-destination">
                                 <li><input type="radio" name="radArchDest" >Internal</li>
                                 <li><input type="radio" name="radArchDest" >External</li>

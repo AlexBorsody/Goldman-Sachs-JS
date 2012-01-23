@@ -127,6 +127,46 @@
                         $("#sr-recipient-block").addClass('green-text');
                         $("#sr-mediatype").removeClass('red-text');
                         $("#sr-mediatype").addClass('green-text');
+                        
+                        // Suggestion Logic Build Up 
+                        
+                        //Parse all 5 Question in Send/Receive to get selected Values 
+                        selectedAnswers=new Array();
+                        selectedAnswers["206736"]="";
+                        selectedAnswers["206738"]="";
+                        selectedAnswers["206739"]="";
+                        selectedAnswers["206838"]="";
+                        selectedAnswers["207423"]="";
+                        
+                        
+                         $("#send-receive-destination input[name=dest]").each(function(){
+                       if($(this).is(":checked")){
+                          selectedAnswers["206736"]=$(this).val();
+                       }
+                       })
+                        $("#send-receive-destination input[name=dest]").each(function(){
+                       if($(this).is(":checked")){
+                          selectedAnswers["206736"]=$(this).val();
+                       }
+                       })
+                        $("#send-receive-destination input[name=dest]").each(function(){
+                       if($(this).is(":checked")){
+                          selectedAnswers["206736"]=$(this).val();
+                       }
+                       })
+                        $("#send-receive-destination input[name=dest]").each(function(){
+                       if($(this).is(":checked")){
+                          selectedAnswers["206736"]=$(this).val();
+                       }
+                       })
+                        $("#send-receive-destination input[name=dest]").each(function(){
+                       if($(this).is(":checked")){
+                          selectedAnswers["206736"]=$(this).val();
+                       }
+                       })
+            
+                        
+                        
                         $(this).val('Update Requirements');
 		 
                         //answer demonstration: fade in mock answer if questions selected
@@ -244,7 +284,7 @@
          
     }).mousemove(function(e) {
      
-        //Keep changing the X and Y axis for the tooltip, thus, the tooltip move along with the mouse
+        //Keep changing the X and Y axis for the tooltip, thus, the tooltip will move along with the mouse
         $('#tooltip').css('top', e.pageY + 5 );
         $('#tooltip').css('left', e.pageX + 5 );
          

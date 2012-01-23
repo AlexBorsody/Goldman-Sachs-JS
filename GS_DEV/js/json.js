@@ -1,7 +1,5 @@
 //sample json for logic, this is not exact questions and answers but it is format of questions and answers
-
-
-jasonObject={
+jObj={
     "categories" : [
     "206739",
     "206736",
