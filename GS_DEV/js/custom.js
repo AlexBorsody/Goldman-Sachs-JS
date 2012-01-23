@@ -161,22 +161,34 @@
                           selectedAnswers["206838"]=$(this).val();
                        }
                        })
-                        $("#send-receive-destination input[name=special]").each(function(){
+                        $("#send-receive-special input[name=special]").each(function(){
                        if($(this).is(":checked")){
-                           if(selectedAnswers["207423"]==''){
+                           
                           selectedAnswers["207423"]=$(this).val();
                           
-                           }else{
-                               //Have to add commma for checkboxes
-                                selectedAnswers["207423"]=$(this).val();
-                           }
                        }
                        })
             
-            
-                  alert((jObj['links'][7]['selections']["206739"]))       
-           alert( areArraysEqual(selectedAnswers, jObj['links'][0]['selections']));
-            
+           document.write( selectedAnswers["206736"]+"="+
+                        selectedAnswers["206738"]+"="+
+                        selectedAnswers["206739"]+"="+
+                        selectedAnswers["206838"]+"="+
+                        selectedAnswers["207423"])
+           /*      // alert((jObj['links'][6]['selections']["206739"]))       
+                     // alert((jObj['links'].length))  */
+                      for(j=0;j<=10;j++){
+        // document.write(jObj['links'][j]['selections']['206736']+"=="+selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']+"=="+selectedAnswers["206738"]&&jObj['links'][j]['selections']['206739']+"=="+selectedAnswers["206739"]&& jObj['links'][j]['selections']['206838']+"=="+selectedAnswers["206838"]&&jObj['links'][j]['selections']['207423']+"=="+selectedAnswers["207423"]);
+                 if( jObj['links'][j]['selections']['206736']==selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']==selectedAnswers["206738"]&&jObj['links'][j]['selections']['206739']==selectedAnswers["206739"]&& jObj['links'][j]['selections']['206838']==selectedAnswers["206838"]&&    
+     jObj['links'][j]['selections']['207423']==selectedAnswers["207423"])  {
+     
+     alert("Matched Found:"+jObj['links'][j]['text']);
+     }else{
+         alert("Not Matched")
+     } 
+                          
+                      }
+                      
+                      
             
                        // alert(selectedAnswers["206838"]);
                         
@@ -210,55 +222,7 @@
         })
        
         
-        
-        
-        
-        
-        function areArraysEqual(array1, array2) {
-   var temp = new Array();
-   if ( (!array1[0]) || (!array2[0]) ) { // If either is not an array
-      return false;
-   }
-   if (array1.length != array2.length) {
-      return false;
-   }
-   // Put all the elements from array1 into a "tagged" array
-   for (var i=0; i<array1.length; i++) {
-      key = (typeof array1[i]) + "~" + array1[i];
-   // Use "typeof" so a number 1 isn't equal to a string "1".
-      if (temp[key]) { temp[key]++; } else { temp[key] = 1; }
-   // temp[key] = # of occurrences of the value (so an element could appear multiple times)
-   }
-   // Go through array2 - if same tag missing in "tagged" array, not equal
-   for (var i=0; i<array2.length; i++) {
-      key = (typeof array2[i]) + "~" + array2[i];
-      if (temp[key]) {
-         if (temp[key] == 0) { return false; } else { temp[key]--; }
-      // Subtract to keep track of # of appearances in array2
-      } else { // Key didn't appear in array1, arrays are not equal.
-         return false;
-      }
-   }
-   // If we get to this point, then every generated key in array1 showed up the exact same
-   // number of times in array2, so the arrays are equal.
-   return true;
-}
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
         
        
         /* Archive Tab Form Validation   */
