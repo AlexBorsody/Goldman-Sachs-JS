@@ -174,7 +174,7 @@
                        })
             
             
-                  alert((jObj['links'][0]['selections']))       
+                  alert((jObj['links'][7]['selections']["206739"]))       
            alert( areArraysEqual(selectedAnswers, jObj['links'][0]['selections']));
             
             
