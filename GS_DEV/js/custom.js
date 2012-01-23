@@ -128,9 +128,11 @@
                         $("#sr-mediatype").removeClass('red-text');
                         $("#sr-mediatype").addClass('green-text');
                         
-                        // Suggestion Logic Build Up 
+                       
+                       
+                       // Suggestion Logic Build Up Send/Receive Section
                         
-                        //Parse all 5 Question in Send/Receive to get selected Values 
+                        //Parse all 5 Question in Send/Receive to get selected Values and store in a array
                         selectedAnswers=new Array();
                         selectedAnswers["206736"]="";
                         selectedAnswers["206738"]="";
@@ -144,28 +146,33 @@
                           selectedAnswers["206736"]=$(this).val();
                        }
                        })
-                        $("#send-receive-destination input[name=dest]").each(function(){
+                        $("#send-receive-recipient input[name=radRecp]").each(function(){
                        if($(this).is(":checked")){
-                          selectedAnswers["206736"]=$(this).val();
+                          selectedAnswers["206738"]=$(this).val();
                        }
                        })
-                        $("#send-receive-destination input[name=dest]").each(function(){
+                        $("#send-receive-frequency input[name=radFrequency]").each(function(){
                        if($(this).is(":checked")){
-                          selectedAnswers["206736"]=$(this).val();
+                          selectedAnswers["206739"]=$(this).val();
                        }
                        })
-                        $("#send-receive-destination input[name=dest]").each(function(){
+                        $("#send-receive-datatype input[name=radDataType]").each(function(){
                        if($(this).is(":checked")){
-                          selectedAnswers["206736"]=$(this).val();
+                          selectedAnswers["206838"]=$(this).val();
                        }
                        })
-                        $("#send-receive-destination input[name=dest]").each(function(){
+                        $("#send-receive-destination input[name=special]").each(function(){
                        if($(this).is(":checked")){
-                          selectedAnswers["206736"]=$(this).val();
+                           if(selectedAnswers["207423"]==''){
+                          selectedAnswers["207423"]=$(this).val();
+                          
+                           }else{
+                                selectedAnswers["207423"]=$(this).val();
+                           }
                        }
                        })
             
-                        
+                        alert(selectedAnswers["206838"]);
                         
                         $(this).val('Update Requirements');
 		 
