@@ -18,23 +18,23 @@
 
                 <!-- Three Images Starts -->
                 <ul id="tabs">
-                    <li  class="first  first-active"> <a rel="tooltip" title="select your communication type" href="#first"></a> </li>  
-                    <li class=" second  second-active"><a rel="tooltip" title="select your communication type"  href="#second"> </a></li>
-                    <li class=" third  third-active"><a rel="tooltip" title="select your communication type" href="#third"> </a> </li>
+                    <li  class="first  first-active"> <a href="#first"></a> </li>  
+                    <li class=" second  second-active"><a href="#second"> </a></li>
+                    <li class=" third  third-active"><a href="#third"> </a> </li>
                 </ul>
                 <!-- Three Images Ends -->
 
                 <!-- All three Form Holder Starts -->
 
                 <div id="form-block">
-
+<form>
                     <!--Send Receive Form  Starts-->
 
                     <div id="first" style="display:none;" >
 
                         <!-- Media Type Starts  -->
                         <div class="light-bf">
-                            <div id="sr-mediatype" class="green-text"><a rel="tooltip" title="dummy text">Select your media type</a><span class="blackText"> (select one)*</span></div>
+                            <div id="sr-mediatype" class="green-text">Select your media type<span class="blackText"> (select one)*</span></div>
                             <ul id="sr-media-type-ul">
                                 <li><input type="radio" name="radMediaType" value="electronic" id="mediaType1" >Electronic</li>
                                 <li><input type="radio" name="radMediaType" value="non-electronic" id="mediaType2" >Non Electronic</li>
@@ -54,7 +54,7 @@
 
                             <!-- Destination Starts -->
                             <div>
-                                <div id="sr-dest-block" class="green-text"><a rel="tooltip" title="dummy text">Destination</a><span class="blackText"> (select one)*</span></div>
+                                <div id="sr-dest-block" class="green-text">Destination<span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-destination">
                                     <li><input type="radio" id="check-1" name="dest" value="Internal" >Internal</li>
                                     <li><input type="radio"  id="check-2" name="dest" value="External" >External</li>
@@ -65,7 +65,7 @@
 
                             <!-- Frequency Starts -->
                             <div>
-                                <div id="sr-frequency-block" class="green-text"><a rel="tooltip" title="dummy text">Frequency</a><span class="blackText"> (select one)*</span></div>
+                                <div id="sr-frequency-block" class="green-text">Frequency<span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-frequency">
                                     <li><input type="radio" name="radFrequency" value="One time">One Time(Ad-hoc)</li>
                                     <li><input type="radio" name="radFrequency" value="Regularly">Regularly</li>
@@ -76,7 +76,7 @@
                             <!-- Recipient Starts -->
 
                             <div>
-                                <div id="sr-recipient-block" class="green-text"><a rel="tooltip" title="dummy text">Recipient</a><span class="blackText"> (select one)*</span></div>
+                                <div id="sr-recipient-block" class="green-text">Recipient<span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-recipient">
                                     <li><input type="radio"  name="radRecp" value="One recipient constantly" >One recipient constantly</li>
                                     <li><input type="radio"  name="radRecp" value="Manually change recipients">Manually change recipient</li>
@@ -101,7 +101,7 @@
 
                             <!-- Data type selection Starts  -->
                             <div>
-                                <div id="sr-datatype-block" class="green-text"><a rel="tooltip" title="dummy text">Data Type</a><span class="blackText"> (select one)*</span></div>
+                                <div id="sr-datatype-block" class="green-text">Data Type<span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-datatype">
                                     <li><input type="radio" name="radDataType" value="Email content withouth attachment">Email</li>
                                     <li><input type="radio" name="radDataType" value="Documents">Document</li>
@@ -114,7 +114,7 @@
                             <!--Special Requirement Starts -->
 
                             <div>
-                                <div class="green-text"><a rel="tooltip" title="dummy text">Special Requirements</a><span class="blackText"> (select all that apply)</span></div>
+                                <div class="green-text">Special Requirements<span class="blackText"> (select all that apply)</span></div>
                                 <ul id="send-receive-special">
                                     <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded ">Cannot be redistributed or forwarded</li>
                                     <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded (For internal only)">Cannot be redistributed or forwarded</li>
@@ -153,6 +153,7 @@
 		   
                         <div class="button-block"> 
                             <input id="send-receive-submit" type="button" value="Submit" class="update-button">
+                             <input id="reset" type="reset" value="Reset">
                         </div>
 
                     </div>
@@ -179,7 +180,10 @@
                         <!--Destination Ends-->
                         <div>
 
-                            <div class="button-block">   <input id="collaborate-submit" type="submit" value="Submit" class="update-button"></div>
+                            <div class="button-block">
+                                <input id="collaborate-submit" type="submit" value="Submit" class="update-button">
+                                <input id="reset" type="reset" value="Reset">
+                            </div>
 
                         </div>  
 
@@ -216,8 +220,12 @@
                         </div>  
                         <!-- Hidden form to shown Destination Radio Buttons --> 
 
-                        <div class="button-block"><input id="archive-submit" type="button" value="Submit" class="update-button"></div>
-
+                        <div class="button-block">
+                            <input id="archive-submit" type="button" value="Submit" class="update-button">
+                            <input id="reset" type="reset" value="Reset">
+                        </div>
+                        
+</form>
                     </div>
 
                     <!--Archive form  starts-->

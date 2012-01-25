@@ -102,8 +102,7 @@ li.third-active{
 }
 
 .light-bf{
-    border:1px solid #cccccc;
-    background-color: #eeeeee;
+     border-bottom: 2px dotted gray;
      padding: 6px;
 }
 
@@ -129,12 +128,16 @@ width: 279px;
 .button-block{
  width: 152px;
  margin: 72px auto;
+ 
 }
 .button-block input{
 background-color: #739CC6;
 border: 1px solid #CCCCCC;
 color: #FFFFFF;
 margin: 1px;
+border: 1px solid white;
+outline: 1px solid gray;
+
 }
 
 #sr-left-checks,#sr-right-checks,#archDest{
@@ -261,5 +264,6 @@ label.error {
 }
 
 .blackText {
-      color:#000;
+    color: #000000;
+    font-weight: 600;
 }

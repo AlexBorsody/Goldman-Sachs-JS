@@ -1,221 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
-      
-     <link rel="stylesheet"  href="css/style.css" />
-     <!--<link rel="stylesheet"  href="js/jqtransformplugin/jqtransform.css" /> -->
-     
-    
+        <link rel="stylesheet"  href="css/style.css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
         <script type="text/javascript" src="js/json.js"></script>
         <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
-	<!-- 	<script type="text/javascript" src="http://jquery.bassistance.de/validate/jquery.validate.js"></script>
-      <script type="text/javascript" src="js/jqtransformplugin/jquery.jqtransform.js"></script>
-	  <script>
-  $(document).ready(function(){
-    $("#form1").validate();
-  });
-  </script>
-	   -->
-	  
-
     </head>
-    
+
     <body>
         <!--Outer Content Div Starts -->
         <div id="content">
-            
-         <!--   <ul id="page-header">
-              <li> Technolgy<span>Risk</span> &nbsp;|</li>
-                 <li>&nbsp;SecureDataHandling<span>Solutions</span> </li>
-            </ul>-->
-        <div id="center-content"><!--Center Content Div Starts -->
-         
 
-            <!--
-            <div class="green-text">Share data securely to protect the firm, it's people,capital, and reputation</div>
-            
-            <div>Refer to <a href="#">Data Protection Principles</a> to learn what protecting information is a requirement</div>
-            
-              <h2>What do you need to do ?</h2>-->
-                
+            <!--Center Content Div Starts -->
+
+            <div id="center-content">
+
+                <!-- Three Images Starts -->
                 <ul id="tabs">
-                    <li  class="first  first-active"> <a rel="tooltip" title="select your communication type" href="#first"></a> </li>  
-                    <li class=" second  second-active"><a rel="tooltip" title="select your communication type"  href="#second"> </a></li>
-                    <li class=" third  third-active"><a rel="tooltip" title="select your communication type" href="#third"> </a> </li>
-                 </ul>
-              
-              <div id="form-block">
-                  
-              <div id="first" style="display:none;" ><!--Send Receive Starts-->
-                  <div class="light-bf">
-                       <div id="sr-mediatype" class="green-text">Select your media type<span> (select one)*</span></div>
-                      <ul id="sr-media-type-ul">
-                          <li><input type="radio" name="radMediaType" value="electronic" id="mediaType1" />Electronic</li>
-                          <li><input type="radio" name="radMediaType" value="non-electronic" id="mediaType2" />Non Electronic</li>
-                       
-                      </ul> 
-                      
-                  </div>  
-                  
-                  
-                  <div id="sr-left-checks"><!--left Checks starts-->
-                  
-                    <div class="">
-                       <div id="sr-dest-block" class="green-text">Destination<span> (select one)*</span></div>
-                      <ul id="send-receive-destination">
-                          <li><input type="radio" id="check-1" name="dest"  /><label for="check-1">Internal</label></li>
-                          <li><input type="radio"  id="check-2" name="dest" /><label for="check-2">External</label></li>
-                      </ul> 
-                      
-                  </div>  
-                  
-                      
-                        <div class="">
-                       <div id="sr-frequency-block" class="green-text">Frequency<span> (select one)*</span></div>
-                      <ul id="send-receive-frequency">
-                          <li><input type="radio" name="radFrequency"/>One Time(Ad-hoc)</li>
-                          <li><input type="radio" name="radFrequency"/>Regularly</li>
-                      </ul> 
-                      
-                  </div>  
-                      
-                      
-                        <div class="">
-                       <div id="sr-recipient-block" class="green-text">Recipient<span> (select one)*</span></div>
-                      <ul id="send-receive-recipient">
-                          <li><input type="radio"  name="radRecp" />One recipient constantly</li>
-                          <li><input type="radio"  name="radRecp"/>Manually change recipient</li>
-                          <li><input type="radio"  name="radRecp"/>Multiple recipient in different domain</li>
-                          <li><input type="radio"  name="radRecp"/>Programmatic recipient</li>
-                      </ul> 
-                      
-                  </div>
-                      
-                        <div class="">
-                      &nbsp;
-                      
-                  </div>  
-                      <div class="">
-                      &nbsp;
-                      
-                  </div>  
-                  
-                  
-                  
-              </div><!--left Checks Ends-->
-                  <div id="sr-right-checks"><!--Right Checks starts-->
-                  
-                  
-                
-                   <div class="">
-                       <div id="sr-datatype-block" class="green-text">Data Type<span> (select one)*</span></div>
-                      <ul id="send-receive-datatype">
-                          <li><input type="radio" name="radDataType"/>Email</li>
-                          <li><input type="radio" name="radDataType"/>Document</li>
-                          <li><input type="radio" name="radDataType"/>Custom content</li>
-                      </ul> 
-                      
-                  </div>  
-                   <div class="">
-                       <div class="green-text">Special Requirements<span> (select all that apply)</span></div>
-                      <ul id="">
-                          <li><input type="checkbox" name="radio5"/>Cannot be redistributed or forwarded</li>
-                         <li><input type="checkbox" name="radio5"/>Cannot be redistributed or forwarded</li>
-                        <!--   <li><input type="checkbox" />If email,attachment is required</li> -->
-                          <li><input type="checkbox" name="radio5"/>Large amount of data FTP is required</li>
-                      </ul> 
-                      
-                  </div>  
-                  
-                  
-                      <div style="clear:both"></div>
-              </div><!--Right Checks Ends-->
-                  
-                <div style="display:none" class="light-bf">
-                    <div>Based on your selections we suggest using</div>
-                      <ul >
-                          <li>Secure Zone</li>
-                          <li>SEFT</li>
-                          <li>Adobe LiveCycle</li>
-                     
-                      </ul> 
-                      
-                  </div>
-		   <div id="answer">
+                    <li  class="first  first-active"> <a href="#first"></a> </li>  
+                    <li class=" second  second-active"><a href="#second"> </a></li>
+                    <li class=" third  third-active"><a href="#third"> </a> </li>
+                </ul>
+                <!-- Three Images Ends -->
+
+                <!-- All three Form Holder Starts -->
+
+                <div id="form-block">
+<form>
+                    <!--Send Receive Form  Starts-->
+
+                    <div id="first" style="display:none;" >
+
+                        <!-- Media Type Starts  -->
+                        <div class="light-bf">
+                            <div id="sr-mediatype" class="green-text"><a rel="tooltip" title="dummy text">Select your media type</a><span class="blackText"> (select one)*</span></div>
+                            <ul id="sr-media-type-ul">
+                                <li><input type="radio" name="radMediaType" value="electronic" id="mediaType1" >Electronic</li>
+                                <li><input type="radio" name="radMediaType" value="non-electronic" id="mediaType2" >Non Electronic</li>
+
+                            </ul> 
+
+                        </div>  
+                        <!-- Media Type Ends  -->
+
+
+                        <!-- Hidden Form Shown on If  Electronic Started  --> 
+
+
+                        <!--Left Column Questions  Starts -->
+                        <div id="sr-left-checks">
+
+
+                            <!-- Destination Starts -->
+                            <div>
+                                <div id="sr-dest-block" class="green-text"><a rel="tooltip" title="dummy text">Destination</a><span class="blackText"> (select one)*</span></div>
+                                <ul id="send-receive-destination">
+                                    <li><input type="radio" id="check-1" name="dest" value="Internal" >Internal</li>
+                                    <li><input type="radio"  id="check-2" name="dest" value="External" >External</li>
+                                </ul> 
+
+                            </div>  
+                            <!-- Destination Ends   -->
+
+                            <!-- Frequency Starts -->
+                            <div>
+                                <div id="sr-frequency-block" class="green-text"><a rel="tooltip" title="dummy text">Frequency</a><span class="blackText"> (select one)*</span></div>
+                                <ul id="send-receive-frequency">
+                                    <li><input type="radio" name="radFrequency" value="One time">One Time(Ad-hoc)</li>
+                                    <li><input type="radio" name="radFrequency" value="Regularly">Regularly</li>
+                                </ul> 
+                            </div>  
+                            <!-- Frequency Ends-->
+
+                            <!-- Recipient Starts -->
+
+                            <div>
+                                <div id="sr-recipient-block" class="green-text"><a rel="tooltip" title="dummy text">Recipient</a><span class="blackText"> (select one)*</span></div>
+                                <ul id="send-receive-recipient">
+                                    <li><input type="radio"  name="radRecp" value="One recipient constantly" >One recipient constantly</li>
+                                    <li><input type="radio"  name="radRecp" value="Manually change recipients">Manually change recipient</li>
+                                    <li><input type="radio"  name="radRecp" value="Multiple recipients in different domains"> Multiple recipient in different domain</li>
+                                    <li><input type="radio"  name="radRecp" value="Programmatic recipients">Programmatic recipient</li>
+                                </ul> 
+
+                            </div>
+                            <!-- Recipient Ends -->
+                            <!-- Put some space  -->
+                            <div> &nbsp;</div>  
+                            <div> &nbsp;</div>  
+
+
+
+                        </div>
+
+                        <!--Left Column Questions  Ends -->
+
+                        <!--Right Column Checks starts-->
+                        <div id="sr-right-checks">
+
+                            <!-- Data type selection Starts  -->
+                            <div>
+                                <div id="sr-datatype-block" class="green-text"><a rel="tooltip" title="dummy text">Data Type</a><span class="blackText"> (select one)*</span></div>
+                                <ul id="send-receive-datatype">
+                                    <li><input type="radio" name="radDataType" value="Email content withouth attachment">Email</li>
+                                    <li><input type="radio" name="radDataType" value="Documents">Document</li>
+                                    <li><input type="radio" name="radDataType" value="Custom Content">Custom content</li>
+                                </ul> 
+
+                            </div>  
+                            <!-- Data type selection Ends   -->
+
+                            <!--Special Requirement Starts -->
+
+                            <div>
+                                <div class="green-text"><a rel="tooltip" title="dummy text">Special Requirements</a><span class="blackText"> (select all that apply)</span></div>
+                                <ul id="send-receive-special">
+                                    <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded ">Cannot be redistributed or forwarded</li>
+                                    <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded (For internal only)">Cannot be redistributed or forwarded</li>
+                                    <!--   <li><input type="checkbox" />If email,attachment is required</li> -->
+                                    <li><input type="checkbox" name="special" value="Large volume of data, FTP required">Large amount of data FTP is required</li>
+                                </ul> 
+
+                            </div>  
+                            <!--Special Requirement Ends  -->
+
+                            <div style="clear:both"></div>
+                        </div>
+
+
+                        <!--Right Column Checks Ends-->
+
+
+                        <!-- Answers  Block 
+                        <div style="display:none" class="light-bf">
+                            <div>Based on your selections we suggest using</div>
+                            <ul >
+                                <li>Secure Zone</li>
+                                <li>SEFT</li>
+                                <li>Adobe LiveCycle</li>
+
+                            </ul> 
+
+                        </div>-->
+                        <div id="answer">
+		    <div class="blackText">&nbsp; &nbsp; Based on your selections we suggest using</div>
 			<ul>
-				<li>Secure Zone</li>
-				<li>SEFT</li>
-				<li>Adobe LifeCycle</li>
+				<li><span id="bigAnswer">Secure Zone</span></li>
+				<li><span class="smallAnswer">SEFT</span></li>
+				<li><span class="smallAnswer">Adobe LiveCycle</span></li></ul>
 		   </div>
 		   
-                   
-              
-              <div class="button-block"> <input id="send-receive-submit" type="button" value="Submit" class="update-button"></div>
-                  
-              </div><!--Send Receive ends-->
-              <div  id="second"><!--Collaborate form starts-->
-                  
-                  
-                  
-                    <div class="light-bf">
-                      <div id="coll-mediatype" class="green-text">Destination<span> (select)*</span></div>
-                      <ul id="coll-media-type-ul">
-                         <li><input type="radio" id="check-1" name="radCollDest" /><label for="check-1">Internal</label></li>
-                          <li><input type="radio"  id="check-2" name="radCollDest" /><label for="check-2">External</label></li>
-                       
-                      </ul> 
-                      
-                  </div>  
-                    <div class="">
-                       
-                        <div class="button-block">   <input id="collaborate-submit" type="submit" value="Submit" class="update-button"></div>
-                       
-                  </div>  
-                  
-              </div><!--Collaborate form  ends-->
-              
-               <div  id="third"><!--Archive form  starts-->
-                  
-                    <div class="light-bf">
-                       <div id="arch-mediatype" class="green-text">Select your media type<span> (select one)*</span></div>
-                      <ul id="archMedia-type">
-                          <li><input type="radio" name="radArchMediaType" value="electronic" id="archMediaType1" />Electronic</li>
-                          <li><input type="radio" name="radArchMediaType" value="non-electronic" id="archMediaType2" />Non Electronic</li>
-                       
-                      </ul> 
-                     
-                  </div>  
-                    <div id="archDest">
-                       <div id="arch-dest-block" class="green-text">Destination<span> (select one)*</span></div>
-                      <ul id="arch-destination">
-                          <li><input type="radio" name="radArchDest"  /><label for="check-1">Internal</label></li>
-                          <li><input type="radio" name="radArchDest"  /><label for="check-2">External</label></li>
-                      </ul> 
-                      
-                  </div>  
-                
-                   <div class="button-block"><input id="archive-submit" type="button" value="Submit" class="update-button"></div>
-                  
-              </div><!--Archive form  starts-->
-                
-            </div> <!--Form block  ends-->
-            
-           
-            
-            
-            
-            
-           <!-- <div></div> Sidebar If needed -->
-            
-            
-            
-            
-        </div>  <!--Center Content Div Ends -->
-            
-        </div> <!--Outer Content Div ends -->
-        
-           
-        
+                        <div class="button-block"> 
+                            <input id="send-receive-submit" type="button" value="Submit" class="update-button">
+                             <input id="reset" type="reset" value="Reset">
+                        </div>
+
+                    </div>
+
+                    <!--Send Receive Form  Starts-->
+
+
+
+                    <!--Collaborate form Starts-->
+
+                    <div  id="second">
+
+                        <!--Destination Starts-->
+                        <div class="light-bf">
+                            <div id="coll-mediatype" class="green-text">Destination<span class="blackText"> (select)*</span></div>
+                            <ul id="coll-media-type-ul">
+                                <li><input type="radio" id="check-1" name="radCollDest" >Internal</li>
+                                <li><input type="radio"  id="check-2" name="radCollDest" >External</li>
+
+                            </ul> 
+
+                        </div>  
+
+                        <!--Destination Ends-->
+                        <div>
+
+                            <div class="button-block">
+                                <input id="collaborate-submit" type="submit" value="Submit" class="update-button">
+                                <input id="reset" type="reset" value="Reset">
+                            </div>
+
+                        </div>  
+
+                    </div>
+
+                    <!--Collaborate Form  ends-->
+
+
+                    <!--Archive Form  starts-->
+                    <div  id="third">
+
+
+                        <!-- Media Type Starts  -->
+                        <div class="light-bf">
+                            <div id="arch-mediatype" class="green-text">Select your media type<span class="blackText"> (select one)*</span></div>
+                            <ul id="archMedia-type">
+                                <li><input type="radio" name="radArchMediaType" value="electronic" id="archMediaType1" />Electronic</li>
+                                <li><input type="radio" name="radArchMediaType" value="non-electronic" id="archMediaType2" />Non Electronic</li>
+                            </ul> 
+
+                        </div>  
+
+                        <!-- Media Type Ends  -->
+
+
+                        <!-- Hidden form to shown Destination Radio Buttons --> 
+                        <div id="archDest">
+                            <div id="arch-dest-block" class="green-text">Destination<span class="blackText"> (select one)*</span></div>
+                            <ul id="arch-destination">
+                                <li><input type="radio" name="radArchDest" >Internal</li>
+                                <li><input type="radio" name="radArchDest" >External</li>
+                            </ul> 
+
+                        </div>  
+                        <!-- Hidden form to shown Destination Radio Buttons --> 
+
+                        <div class="button-block">
+                            <input id="archive-submit" type="button" value="Submit" class="update-button">
+                            <input id="reset" type="reset" value="Reset">
+                        </div>
+                        
+</form>
+                    </div>
+
+                    <!--Archive form  starts-->
+
+                </div> 
+
+                <!--Form block  ends-->
+
+            </div> 
+
+            <!--Center Content Div Ends -->
+
+        </div> 
+
+        <!--Outer Content Div ends -->
+
     </body>
 </html>
