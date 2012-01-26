@@ -1,11 +1,11 @@
 
 
 #content{
-     width: 553px;
+    width: 553px;
     padding:2px;
     margin: 0 auto;
-     font-family: helvetica;
-    font-size: 13px;
+    font-family: helvetica;
+    font-size: 12.9px;
     line-height: 21px;
 }
 
@@ -126,7 +126,7 @@ width: 279px;
 }
 
 .button-block{
- width: 152px;
+ width: 234px;
  margin: 72px auto;
  
 }

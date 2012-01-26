@@ -1,0 +1,137 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+    <head>
+<style>
+
+
+#content{
+    width: 553px;
+    padding:2px;
+    margin: 0 auto;
+    font-family: helvetica;
+    font-size: 12.9px;
+    line-height: 21px;
+}
+
+
+#center-content{
+    padding:0px 15px;
+       
+}
+
+
+#sr-left-checks{
+float: left;
+margin-left: 5px; /*why is this working*/
+margin-top: 20px;
+width: 279px;
+    
+}
+#sr-right-checks{
+    margin-right: 5px;
+    margin-top: 20px;
+	margin-left: 5px;
+}
+
+#sr-left-checks ul{
+     margin: 9px 2px;
+    padding: 0;
+}
+
+#sr-right-checks ul{
+     margin: 9px 2px; /*not adding margin*/
+    padding: 0;
+}
+
+
+#form-block{
+    position:relative;
+    
+}
+
+</style>
+
+    </head>
+
+
+
+    <body>
+
+
+<div id="content">
+
+            <!--Center Content Div Starts -->
+
+            <div id="center-content">
+
+
+                <div id="form-block">
+
+ 
+                        <!--Left Column Questions  Starts -->
+
+                        <div id="sr-left-checks">
+
+
+                            <div>
+
+                                <div id="sr-dest-block" >question block</div>
+
+                                <ul id="send-receive-destination">
+
+                                    <li><input type="radio" name="dest" value="Internal" >Internal</li>
+
+                                    <li><input type="radio" name="dest" value="External" >External</li>
+
+                                </ul> 
+
+                            </div>  
+
+                            <div>
+
+                                <div id="sr-frequency-block">question block</div>
+
+                                <ul id="send-receive-frequency">
+
+                                    <li><input type="radio" name="radFrequency" value="One time">One Time(Ad-hoc)</li>
+
+                                    <li><input type="radio" name="radFrequency" value="Regularly">Regularly</li>
+
+                                </ul> 
+
+                            </div>  
+
+                        </div>
+
+                        <!--Left Column Questions  Ends -->
+
+
+                        <!--Right Column Checks starts-->
+
+                        <div id="sr-right-checks">
+
+                            <div>
+
+                                <div id="sr-datatype-block">question block</div>
+
+                                <ul id="send-receive-datatype">
+
+                                    <li><input type="radio" name="radDataType" value="Email content withouth attachment">Email</li>
+                                    <li><input type="radio" name="radDataType" value="Email content withouth attachment">Email</li>
+
+                                    <li><input type="radio" name="radDataType" value="Documents">Document</li>
+
+                                    <li><input type="radio" name="radDataType" value="Custom Content">Custom content</li>
+
+                                </ul> 
+
+                            </div> 
+						</div>
+					</div>
+				</div>					
+			</div>
+</body>
+</html>

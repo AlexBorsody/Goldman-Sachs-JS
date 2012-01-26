@@ -3,13 +3,13 @@
        
         /* Animation Functions */
         
-        /* Highlighting Current Tab Image and fading other two  */
+           /* Highlighting Current Tab Image and fading other two  */
            
-        $( "#center-content" ).tabs({
-            select: function(event, ui) {
+         $( "#center-content" ).tabs({
+            select: function(event, ui) { 
                 $('#first').css('display','')     
                 li_index=ui.index;  
-                //If 1st is clicked 
+          //If 1st is clicked 
                 if(li_index==0){
                     $('.first').addClass('first-active');
                     $(".second").removeClass('second-active');
@@ -18,7 +18,7 @@
                     
                    
                 } else if(li_index==1){
-                    //If 2nd is clicked
+              //If 2nd is clicked
                     $(".first").removeClass('first-active');
                     $('.second').addClass('second-active');
                     $(".third").removeClass('third-active');
@@ -48,7 +48,7 @@
         // Show/Hide of Send-Recieve Electronic Form
         
         $("#sr-media-type-ul li input[type='radio']").click(function(){
-            //If electronic is selected
+             //If electronic is selected
             if($(this).attr('id')=='mediaType1'){
                 $("#sr-left-checks").fadeIn('slow') 
                 $("#sr-right-checks").fadeIn('slow') 
@@ -71,17 +71,17 @@
         })
    
         
-        /* Form Validations + Suggestion on Submit*/ 
+          /* Form Validations */ 
         
         /* Send-Receive Tab Form  Validation  */
        
-        $("#send-receive-submit").click(function(){
+       $("#send-receive-submit").click(function(){
           
-            //If any radio buttom from the two is checked 
+          //If any radio buttom from the two is checked 
             if($("ul#sr-media-type-ul input[name=radMediaType]").is(':checked')){
               
               
-                // If electronic is checked 
+              // If electronic is checked 
                 if($("#mediaType1").is(':checked')){
                     
                     //At least One option in  Destination is checked 
@@ -92,31 +92,31 @@
                         $("#sr-dest-block").addClass('red-text');
                     }
          
-                    //At least One option in  Recipient is checked 
+                       //At least One option in  Recipient is checked 
                     sr_recipient=$("#send-receive-recipient input[name=radRecp]").is(':checked')
                     //If not Hightlight it 
-                    if(!sr_recipient){
+                   if(!sr_recipient){
                         $("#sr-recipient-block").removeClass('green-text');
                         $("#sr-recipient-block").addClass('red-text');
                     }
-                    //At least One option in  Frequency is checked 
+                     //At least One option in  Frequency is checked 
                     sr_frequency=$("#send-receive-frequency input[name=radFrequency]").is(':checked')
                     //If not Hightlight it 
-                    if(!sr_frequency){
+                   if(!sr_frequency){
                         $("#sr-frequency-block").removeClass('green-text');
                         $("#sr-frequency-block").addClass('red-text');
                     }
                     
-                    //At least One option in  Datatype is checked 
+                      //At least One option in  Datatype is checked 
                     sr_datatype=$("#send-receive-datatype input[name=radDataType]").is(':checked')
                     //If not Hightlight it 
-                    if(!sr_datatype){
+                   if(!sr_datatype){
                         $("#sr-datatype-block").removeClass('green-text');
                         $("#sr-datatype-block").addClass('red-text');
                     }
                 
-                    // If all required radios are checked hide red color and change button to update requirement
-                    if(sr_destination&&sr_recipient&&sr_frequency&&sr_datatype){
+                // If all required radios are checked hide red color and change button to update requirement
+                if(sr_destination&&sr_recipient&&sr_frequency&&sr_datatype){
                         $("#sr-datatype-block").addClass('green-text');
                         $("#sr-datatype-block").removeClass('red-text');
                         $("#sr-frequency-block").addClass('green-text');
@@ -129,19 +129,11 @@
                         $("#sr-mediatype").addClass('green-text');
                         
                        
-                       
-                        // Suggestion Logic Build Up Send/Receive Section
-                        selectedAnswers=new Array();
-                        
-                        //Set Node Id value  to Send / Receive 
-                        selectedAnswers["208163"]="Send / Receive";
-                        
-                        //Set Node Id value to Electronic as electronic is chosen 
-                        selectedAnswers["208164"]="Electronic"
-                        
+                      /* 
+                       // Suggestion Logic Build Up Send/Receive Section
                         
                         //Parse all 5 Question in Send/Receive to get selected Values and store in a array
-                       
+                        selectedAnswers=new Array();
                         selectedAnswers["206736"]="";
                         selectedAnswers["206738"]="";
                         selectedAnswers["206739"]="";
@@ -149,82 +141,59 @@
                         selectedAnswers["207423"]="";
                         
                         
-                        $("#send-receive-destination input[name=dest]").each(function(){
-                            if($(this).is(":checked")){
-                                selectedAnswers["206736"]=$(this).val();
-                            }
-                        })
+                         $("#send-receive-destination input[name=dest]").each(function(){
+                       if($(this).is(":checked")){
+                          selectedAnswers["206736"]=$(this).val();
+                       }
+                       })
                         $("#send-receive-recipient input[name=radRecp]").each(function(){
-                            if($(this).is(":checked")){
+                       if($(this).is(":checked")){
                           
-                                selectedAnswers["206739"]=$(this).val();
-                            }
-                        })
+                            selectedAnswers["206739"]=$(this).val();
+                       }
+                       })
                         $("#send-receive-frequency input[name=radFrequency]").each(function(){
-                            if($(this).is(":checked")){
-                                selectedAnswers["206738"]=$(this).val();
-                            }
-                        })
+                       if($(this).is(":checked")){
+                        selectedAnswers["206738"]=$(this).val();
+                       }
+                       })
                         $("#send-receive-datatype input[name=radDataType]").each(function(){
-                            if($(this).is(":checked")){
-                                selectedAnswers["206838"]=$(this).val();
-                            }
-                        })
+                       if($(this).is(":checked")){
+                          selectedAnswers["206838"]=$(this).val();
+                       }
+                       })
                         $("#send-receive-special input[name=special]").each(function(){
-                            if($(this).is(":checked")){
+                       if($(this).is(":checked")){
                            
-                                selectedAnswers["207423"]=$(this).val();
+                          selectedAnswers["207423"]=$(this).val();
                           
-                            }
-                        })
+                       }
+                       })
             
-                        //set flag to update below if any result is found.Used while inserting answers below this loop
-                        var flag=0;
-
-                        for(j=0;j<jObj['links'].length;j++){
+            /*  document.write( selectedAnswers["206736"]+"="+
+                        selectedAnswers["206738"]+"="+
+                        selectedAnswers["206739"]+"="+
+                        selectedAnswers["206838"]+"="+
+                        selectedAnswers["207423"])
+              // alert((jObj['links'][6]['selections']["206739"]))    */   
+                    /*
+                      for(j=0;j<=jObj['links'].length;j++){  
                           
-                 
-                            /*  selectedAnswers["206838"] and selectedAnswers["206739"]  has multiple value in json array
-                             *  check if our answer is one of the option in those node id array in json atring
-                             *  Have to check if value exist in json ..else it returns undefined , which will break the code */
-                        
-                            recipient_answer=-1;
-                            special_answer=-1;
+       /*  document.write(jObj['links'][j]['selections']['206736']+"=="+selectedAnswers["206736"]+"&&"+
+             jObj['links'][j]['selections']['206738']+"=="+selectedAnswers["206738"]+"&&"+
+           jObj['links'][j]['selections']['206739']+"=="+selectedAnswers["206739"]+"&&"+
+             jObj['links'][j]['selections']['206838']+"=="+selectedAnswers["206838"]+"&&"+
+             jObj['links'][j]['selections']['207423']+"=="+selectedAnswers["207423"]+"<br/>"); */
+   /*              if( jObj['links'][j]['selections']['206736']==selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']==selectedAnswers["206738"]&&jObj['links'][j]['selections']['206739']==selectedAnswers["206739"]&& jObj['links'][j]['selections']['206838']==selectedAnswers["206838"]&&    
+     jObj['links'][j]['selections']['207423']==selectedAnswers["207423"])  {
+     
+     alert("Matched Found:"+jObj['links'][j]['text']);
+     }else{
+        // alert("Not Matched")
+     } 
                           
-                            if(jObj['links'][j]['selections']['206739']!=undefined && jObj['links'][j]['selections']['206838'] !=undefined){
-                                recipient_answer=$.inArray(selectedAnswers["206739"],jObj['links'][j]['selections']['206739'])
-                                special_answer=$.inArray(selectedAnswers["206838"],jObj['links'][j]['selections']['206838'])
-                            }
-                          
-                            //Have to check if value exist in json ..else it returns undefined , which will break the code 
-                            
-                            if(jObj['links'][j]['selections']['208163']!=undefined && jObj['links'][j]['selections']['208164'] !=undefined&& jObj['links'][j]['selections']['206736'] !=undefined&& jObj['links'][j]['selections']['206738'] !=undefined){  
-                                
-                                if( jObj['links'][j]['selections']['208163']==selectedAnswers["208163"]&&jObj['links'][j]['selections']['208164']==selectedAnswers["208164"]&&jObj['links'][j]['selections']['206736']==selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']==selectedAnswers["206738"]&&    
-                                    recipient_answer > -1 && special_answer > -1)  {
-
-                                 //At least one answer found , set the flag to 1
-
-
-                                    alert("Matched Found:"+jObj['links'][j]['text']);
-                                    if(jObj['links'][j]['selections']['207957']=='Recommended'){
-                                    recommended_products='<li><span id="bigAnswer">Secure Zone</span></li>';
-                                    }
-                                    else{
-                                        alternate_products='<li><span id="bigAnswer">Secure Zone</span></li>';
-                                    }
-                                    
-                                   
-                                }else{
-                            // alert("Not Matched")
-                            }
-                            }else{
-                        // alert("Node Id's not found in  Present Array")
-                                   
-                        }
-                          
-                        } send-receive-result
-                      
+                      }
+*/
                         $(this).val('Update Requirements');
 		 
                         //answer demonstration: fade in mock answer if questions selected
@@ -248,7 +217,7 @@
                 }
         
             } else{
-                // If none from electronic or non-electronic is selected highlight it 
+                 // If none from electronic or non-electronic is selected highlight it 
                 $("#sr-mediatype").removeClass('green-text');
                 $("#sr-mediatype").addClass('red-text');
             }
@@ -268,15 +237,15 @@
                 if($("archMediaType1").val()=='electronic'){
                     
          
-                    //At least One option in  Destination is checked 
-                    arch_destination=$("#arch-destination input[name=radArchDest]").is(':checked')
-                    //If not Hightlight it 
+           //At least One option in  Destination is checked 
+                arch_destination=$("#arch-destination input[name=radArchDest]").is(':checked')
+          //If not Hightlight it 
           
                     if(!arch_destination){ 
                         $("#arch-dest-block").removeClass('green-text');
                         $("#arch-dest-block").addClass('red-text');
                     }
-                    // If all required radios are checked hide red color and change button to update requirement
+        // If all required radios are checked hide red color and change button to update requirement
                     if(arch_destination){
                         $("#arch-mediatype").addClass('green-text');
                         $("#arch-mediatype").removeClass('red-text');
@@ -285,14 +254,14 @@
                         $(this).val('Update Requirements')
                     }
                 }else{
-                    //If Non Electronic is selected , Remove any previous highlight and change button  
+                 //If Non Electronic is selected , Remove any previous highlight and change button  
                     $("#arch-mediatype").addClass('green-text');
                     $("#arch-mediatype").removeClass('red-text');
                     $(this).val('Update Requirements') 
                 }
             }
             else{
-                // If none from electronic or non-electronic is selected highlight it 
+                 // If none from electronic or non-electronic is selected highlight it 
                 $("#arch-mediatype").removeClass('green-text');
                 $("#arch-mediatype").addClass('red-text');
                 
@@ -302,7 +271,7 @@
         /* Collabrate  Form Validation   */
       
         $("#collaborate-submit").click(function(){
-            // If selected , update the button 
+           // If selected , update the button 
             if($("#coll-media-type-ul input[name=radCollDest]").is(':checked')){
                 $("#coll-mediatype").addClass('green-text');
                 $("#coll-mediatype").removeClass('red-text');
@@ -320,43 +289,43 @@
    
     
     
-        /* UI  Tool Tip Function  */
+    /* UI  Tool Tip Function  */
     
-        //Select all anchor tag with rel set to tooltip
-        $('a[rel=tooltip]').mouseover(function(e) {
+    //Select all anchor tag with rel set to tooltip
+    $('a[rel=tooltip]').mouseover(function(e) {
          
-            //Grab the title attribute's value and assign it to a variable
-            var tip = $(this).attr('title');   
+        //Grab the title attribute's value and assign it to a variable
+        var tip = $(this).attr('title');   
          
-            //Remove the title attribute's to avoid the native tooltip from the browser
-            $(this).attr('title','');
+        //Remove the title attribute's to avoid the native tooltip from the browser
+        $(this).attr('title','');
          
-            //Append the tooltip template and its value
-            $(this).append('<div id="tooltip"><div class="tipHeader"></div><div class="tipBody">' + tip + '</div><div class="tipFooter"></div></div>');    
+        //Append the tooltip template and its value
+        $(this).append('<div id="tooltip"><div class="tipHeader"></div><div class="tipBody">' + tip + '</div><div class="tipFooter"></div></div>');    
          
-            //Set the X and Y axis of the tooltip
-            $('#tooltip').css('top', e.pageY + 5 );
-            $('#tooltip').css('left', e.pageX + 5 );
+        //Set the X and Y axis of the tooltip
+        $('#tooltip').css('top', e.pageY + 5 );
+        $('#tooltip').css('left', e.pageX + 5 );
          
-            //Show the tooltip with fadeIn effect
-            $('#tooltip').fadeIn('slow');
-            $('#tooltip').fadeTo('10',0.8);
+        //Show the tooltip with fadeIn effect
+        $('#tooltip').fadeIn('slow');
+        $('#tooltip').fadeTo('10',0.8);
          
-        }).mousemove(function(e) {
+    }).mousemove(function(e) {
      
-            //Keep changing the X and Y axis for the tooltip, thus, the tooltip will move along with the mouse
-            $('#tooltip').css('top', e.pageY + 5 );
-            $('#tooltip').css('left', e.pageX + 5 );
+        //Keep changing the X and Y axis for the tooltip, thus, the tooltip will move along with the mouse
+        $('#tooltip').css('top', e.pageY + 5 );
+        $('#tooltip').css('left', e.pageX + 5 );
          
-        }).mouseout(function() {
+    }).mouseout(function() {
      
-            //Put back the title attribute's value
-            $(this).attr('title',$('.tipBody').html());
+        //Put back the title attribute's value
+        $(this).attr('title',$('.tipBody').html());
      
-            //Remove the appended tooltip template
-            $(this).children('div#tooltip').remove();
+        //Remove the appended tooltip template
+        $(this).children('div#tooltip').remove();
          
-        });
+    });
  
 
     

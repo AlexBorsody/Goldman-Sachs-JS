@@ -1,0 +1,53 @@
+
+
+#content{
+    width: 553px;
+    padding:2px;
+    margin: 0 auto;
+    font-family: helvetica;
+    font-size: 12.9px;
+    line-height: 21px;
+}
+
+
+#center-content{
+    padding:0px 15px;
+       
+}
+
+
+#sr-left-checks{
+float: left;
+margin-left: 5px; /*why is this working*/
+margin-top: 20px;
+width: 279px;
+    
+}
+#sr-right-checks{
+    margin-right: 5px;
+    margin-top: 20px;
+	margin-left: 5px;
+}
+
+#sr-left-checks ul{
+     margin: 9px 2px;
+    padding: 0;
+}
+
+#sr-right-checks ul{
+     margin: 9px 2px; /*not adding margin*/
+    padding: 0;
+}
+
+
+
+/*
+#sr-left-checks,#sr-right-checks,#archDest{
+    display:none;
+}
+*/
+#form-block{
+    position:relative;
+    
+}
+
