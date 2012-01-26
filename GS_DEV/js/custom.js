@@ -239,15 +239,7 @@
                       
                         $(this).val('Update Requirements');
 		 
-                        //answer demonstration: fade in mock answer if questions selected
-                        $(".button-block").click(function(){
-                            $("#answer").fadeIn('slow');
-	    
-                            $("#mediaType2").click( function(){
-                                $("#answer").hide();
-		
-                            });
-                        });
+                     
   
                     }
                 }
@@ -255,9 +247,27 @@
                     //If Non Electronic is selected , Remove any previous highlight and change button  
                     $("#sr-mediatype").removeClass('red-text');
                     $("#sr-mediatype").addClass('green-text');
+
+                    // Find suggestion
+                    //Set Node Id value  to Send / Receive
+                        selectedAnswers["208163"]="Send / Receive";
+
+                        //Set Node Id value to Electronic as electronic is chosen
+                        selectedAnswers["208164"]="Electronic"
+
+
                     $(this).val('Update Requirements')
                 
                 }
+                   //answer demonstration: fade in mock answer if questions selected
+                        $(".button-block").click(function(){
+                            $("#answer").fadeIn('slow');
+
+                            $("#mediaType2").click( function(){
+                                $("#answer").hide();
+
+                            });
+                        });
         
             } else{
                 // If none from electronic or non-electronic is selected highlight it 
