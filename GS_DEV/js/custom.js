@@ -204,14 +204,14 @@
                                     recipient_answer > -1 && special_answer > -1)  {
 
                                  //At least one answer found , set the flag to 1
-
+                                       flag=1;
 
                                     alert("Matched Found:"+jObj['links'][j]['text']);
                                     if(jObj['links'][j]['selections']['207957']=='Recommended'){
-                                    recommended_products='<li><span id="bigAnswer">Secure Zone</span></li>';
+                                    recommended_products='<li><span id="bigAnswer">'+jObj['links'][j]['text']+'</span></li>';
                                     }
                                     else{
-                                        alternate_products='<li><span id="bigAnswer">Secure Zone</span></li>';
+                                        alternate_products='<li><span id="smallAnswer">'+jObj['links'][j]['text']+'</span></li>';
                                     }
                                     
                                    
@@ -223,7 +223,16 @@
                                    
                         }
                           
-                        } send-receive-result
+                        }
+
+                        //Check if any answer found and update answer block
+                        if(flag){
+                         $("ul#send-receive-result").html(recommended_products+alternate_products);
+                        }else{
+                           $("ul#send-receive-result").html("No suggestion available");
+                        }
+
+
                       
                         $(this).val('Update Requirements');
 		 
