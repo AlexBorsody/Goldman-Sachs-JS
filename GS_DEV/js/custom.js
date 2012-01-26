@@ -79,7 +79,13 @@
           
             //If any radio buttom from the two is checked 
             if($("ul#sr-media-type-ul input[name=radMediaType]").is(':checked')){
-              
+
+
+                //Set Variable to hold suggestion
+
+                recommended_products='';
+                alternate_products='';
+
               
                 // If electronic is checked 
                 if($("#mediaType1").is(':checked')){
@@ -180,9 +186,7 @@
             
                         //set flag to update below if any result is found.Used while inserting answers below this loop
                         var flag=0;
-                        recommended_products='';
-                        alternate_products='';
-
+                      
                         for(j=0;j<jObj['links'].length;j++){
                           
                  
@@ -206,12 +210,12 @@
                                 if( jObj['links'][j]['selections']['208163']==selectedAnswers["208163"]&&jObj['links'][j]['selections']['208164']==selectedAnswers["208164"]&&jObj['links'][j]['selections']['206736']==selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']==selectedAnswers["206738"]&&    
                                     recipient_answer > -1 && special_answer > -1)  {
 
-                                 //At least one answer found , set the flag to 1
-                                       flag=1;
+                                    //At least one answer found , set the flag to 1
+                                    flag=1;
 
-                                 //   alert("Matched Found:"+jObj['links'][j]['text']);
+                                    //   alert("Matched Found:"+jObj['links'][j]['text']);
                                     if(jObj['links'][j]['selections']['207957']=='Recommended'){
-                                    recommended_products+='<li><span class="bigAnswer">'+jObj['links'][j]['text']+'</span></li>';
+                                        recommended_products+='<li><span class="bigAnswer">'+jObj['links'][j]['text']+'</span></li>';
                                     }
                                     else{
                                         alternate_products+='<li><span class="smallAnswer">'+jObj['links'][j]['text']+'</span></li>';
@@ -230,9 +234,9 @@
 
                         //Check if any answer found and update answer block
                         if(flag){
-                         $("ul#send-receive-result").html(recommended_products+alternate_products);
+                            $("ul#send-receive-result").html(recommended_products+alternate_products);
                         }else{
-                           $("ul#send-receive-result").html("No suggestion available");
+                            $("ul#send-receive-result").html("No suggestion available");
                         }
 
 
@@ -250,24 +254,29 @@
 
                     // Find suggestion
                     //Set Node Id value  to Send / Receive
-                        selectedAnswers["208163"]="Send / Receive";
+                    selectedAnswers["208163"]="Send / Receive";
 
-                        //Set Node Id value to Electronic as electronic is chosen
-                        selectedAnswers["208164"]="Electronic"
+                    //Set Node Id value to Electronic as electronic is chosen
+                    selectedAnswers["208164"]="Electronic"
+
+                    for(j=0;j<jObj['links'].length;j++){
+
+
+                    }
 
 
                     $(this).val('Update Requirements')
                 
                 }
-                   //answer demonstration: fade in mock answer if questions selected
-                        $(".button-block").click(function(){
-                            $("#answer").fadeIn('slow');
+                //answer demonstration: fade in mock answer if questions selected
+                $(".button-block").click(function(){
+                    $("#answer").fadeIn('slow');
 
-                            $("#mediaType2").click( function(){
-                                $("#answer").hide();
+                    $("#mediaType2").click( function(){
+                        $("#answer").hide();
 
-                            });
-                        });
+                    });
+                });
         
             } else{
                 // If none from electronic or non-electronic is selected highlight it 
