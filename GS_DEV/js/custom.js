@@ -252,17 +252,40 @@
                     $("#sr-mediatype").removeClass('red-text');
                     $("#sr-mediatype").addClass('green-text');
 
-                    // Find suggestion
+                    // Find suggestion for non electronic
                     //Set Node Id value  to Send / Receive
                     selectedAnswers["208163"]="Send / Receive";
 
                     //Set Node Id value to Electronic as electronic is chosen
-                    selectedAnswers["208164"]="Electronic"
+                    selectedAnswers["208164"]="Non Electronic"
 
-                    for(j=0;j<jObj['links'].length;j++){
+                   for(j=0;j<jObj['links'].length;j++){
 
 
-                    }
+                            if(jObj['links'][j]['selections']['208163']!=undefined && jObj['links'][j]['selections']['208164'] !=undefined){
+
+                                if( jObj['links'][j]['selections']['208163']==selectedAnswers["208163"]&&jObj['links'][j]['selections']['208164']==selectedAnswers["208164"])  {
+
+                                    //At least one answer found , set the flag to 1
+                                    flag=1;
+
+                                    //   alert("Matched Found:"+jObj['links'][j]['text']);
+                                    if(jObj['links'][j]['selections']['207957']=='Recommended'){
+                                        recommended_products+='<li><span class="bigAnswer">'+jObj['links'][j]['text']+'</span></li>';
+                                    }
+                                    else{
+                                        alternate_products+='<li><span class="smallAnswer">'+jObj['links'][j]['text']+'</span></li>';
+                                    }
+
+
+                                }else{
+                            // alert("Not Matched")
+                            }
+                            }else{
+                        // alert("Node Id's not found in  Present Array")
+
+                        }
+			}
 
 
                     $(this).val('Update Requirements')
