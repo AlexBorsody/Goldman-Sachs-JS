@@ -257,8 +257,7 @@ label.error {
       font-size:12px;
       color:#327085;
 }
-
-#bigAnswer {
+.bigAnswer {
       font-size:17px;
       color:#327085;
 }

@@ -211,7 +211,7 @@
 
                                  //   alert("Matched Found:"+jObj['links'][j]['text']);
                                     if(jObj['links'][j]['selections']['207957']=='Recommended'){
-                                    recommended_products+='<li><span id="bigAnswer">'+jObj['links'][j]['text']+'</span></li>';
+                                    recommended_products+='<li><span class="bigAnswer">'+jObj['links'][j]['text']+'</span></li>';
                                     }
                                     else{
                                         alternate_products+='<li><span class="smallAnswer">'+jObj['links'][j]['text']+'</span></li>';
