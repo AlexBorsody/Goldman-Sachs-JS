@@ -180,6 +180,8 @@
             
                         //set flag to update below if any result is found.Used while inserting answers below this loop
                         var flag=0;
+                        recommended_products='';
+                        alternate_products='';
 
                         for(j=0;j<jObj['links'].length;j++){
                           
@@ -190,6 +192,7 @@
                         
                             recipient_answer=-1;
                             special_answer=-1;
+
                           
                             if(jObj['links'][j]['selections']['206739']!=undefined && jObj['links'][j]['selections']['206838'] !=undefined){
                                 recipient_answer=$.inArray(selectedAnswers["206739"],jObj['links'][j]['selections']['206739'])
