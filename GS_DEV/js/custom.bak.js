@@ -141,7 +141,9 @@
                         $("#sr-mediatype").addClass('green-text');
                         
                        
-
+                       
+                      
+                        
                         //Set Node Id value  to Send / Receive 
                         selectedAnswers["208163"]="Send / Receive";
                         
@@ -222,23 +224,23 @@
                             }
 
                             /* Special Requirement */
-                            var special_requirement=false;
+                            var special_requirement=true;
 
                             if(selectedAnswers['207958']!=undefined){
-                           if(jObj['links'][j]['selections']['207958']!==undefined){
-                               special_requirement=true;
+                           if(jObj['links'][j]['selections']['207958']==undefined){
+                               special_requirement=false;
                             }
                             }
 
                             else if(selectedAnswers['207959']!=undefined){
-                                 if(jObj['links'][j]['selections']['207959']!==undefined){
-                               special_requirement=true;
+                                 if(jObj['links'][j]['selections']['207959']==undefined){
+                               special_requirement=false;
                             }
                             }
 
                            else if(selectedAnswers['207960']!=undefined){
-                                if(jObj['links'][j]['selections']['207960']!==undefined){
-                               special_requirement=true;
+                                if(jObj['links'][j]['selections']['207960']==undefined){
+                               special_requirement=false;
                             }
                             }
                           
@@ -279,15 +281,7 @@
                         }
 
 
-                          $("#answer").fadeIn('slow');
-
-                $("#mediaType2").click(function(){
-                    $("#answer").hide();
-
-                });
-					
-				
-				
+                			
                         $(this).val('Update');
 		 
                      
@@ -348,8 +342,6 @@
                         $("ul#send-receive-result").html("No suggestion available");
                     }
                         $("#answer").fadeIn('slow');
-			
-		//clear answer when click non electronic in send/receive block.
 
                 $("#mediaType2").click( function(){
                     $("#answer").hide();
@@ -526,7 +518,9 @@
                      $("ul#arch-result").empty()
                     $("ul#arch-result").html("No suggestion available");
                 }
-		
+
+                //answer demonstration: fade in mock answer if questions selected
+
                 $("#archanswer").fadeIn('slow');
 
                     $(this).val('Update')
@@ -611,6 +605,7 @@
                     $("ul#coll-result").html("No suggestion available");
                 }
 
+                //answer demonstration: fade in mock answer if questions selected
 
                 $("#collanswer").fadeIn('slow');
 
@@ -645,11 +640,8 @@ $("document").ready(function(){
 
 $(".button-block #reset").click(function(){
 		$("input:radio, input:checkbox").attr("checked", false);
-	        $('#answer').hide();
-		$("#collanswer").hide();
-		$("#archanswer").hide();
-		
-		
+		//$("ul#send-receive-result").empty();
+		//$("#answer").empty();
 });
 
 });

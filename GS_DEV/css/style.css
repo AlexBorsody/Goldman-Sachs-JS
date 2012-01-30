@@ -122,6 +122,7 @@ width: 279px;
 #sr-right-checks{
     margin-right: 5px;
     margin-top: 20px;
+	margin-left: 246px;
     
 }
 
@@ -239,7 +240,7 @@ label.error {
 }
 
 
-#answer{
+#answer,#collanswer,#archanswer{
      width:524px;
      background-color:#EEE;
      border:1px solid #CCCCCC;
@@ -248,7 +249,7 @@ label.error {
     
 }
 
-#answer li {
+#answer li,#collanswer li,#archanswer li {
       list-style: circle;
       color:#327085
 }

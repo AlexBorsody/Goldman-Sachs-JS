@@ -102,7 +102,7 @@
                             <div>
                                 <div id="sr-datatype-block" class="green-text">Data Type<span class="blackText"> (select one)*</span></div>
                                 <ul id="send-receive-datatype">
-                                    <li><input type="radio" name="radDataType" value="Email content withouth attachment">Email</li>
+                                    <li><input type="radio" name="radDataType" value="Email with or without attachments">Email</li>
                                     <li><input type="radio" name="radDataType" value="Documents">Document</li>
                                     <li><input type="radio" name="radDataType" value="Custom Content">Custom content</li>
                                 </ul> 
@@ -115,10 +115,10 @@
                             <div>
                                 <div class="green-text">Special Requirements<span class="blackText"> (select all that apply)</span></div>
                                 <ul id="send-receive-special">
-                                    <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded ">Cannot be redistributed or forwarded</li>
-                                    <li><input type="checkbox" name="special" value="Cannot be redistributed or forwarded (For internal only)">Cannot be redistributed or forwarded</li>
+                                    <li><input type="radio" name="special" value="207958">Cannot be redistributed or forwarded</li>
+                                    <li><input type="radio" name="special" value="207959">Cannot be redistributed or forwarded (For Internal Only)</li>
                                     <!--   <li><input type="checkbox" />If email,attachment is required</li> -->
-                                    <li><input type="checkbox" name="special" value="Large volume of data, FTP required">Large amount of data FTP is required</li>
+                                    <li><input type="radio" name="special" value="207960">Large amount of data FTP is required</li>
                                 </ul> 
 
                             </div>  
@@ -126,7 +126,6 @@
 
                             <div style="clear:both"></div>
                         </div>
-
 
                         <!--Right Column Checks Ends-->
 
@@ -145,9 +144,7 @@
                         <div id="answer">
 		    <div class="blackText">&nbsp; &nbsp; Based on your selections we suggest using</div>
 			<ul id="send-receive-result">
-				<li><span id="bigAnswer">Secure Zone</span></li>
-				<li><span class="smallAnswer">SEFT</span></li>
-				<li><span class="smallAnswer">Adobe LiveCycle</span></li>
+				
                         </ul>
 		   </div>
 		   
@@ -170,14 +167,24 @@
                         <div class="light-bf">
                             <div id="coll-mediatype" class="green-text">Destination<span class="blackText"> (select)*</span></div>
                             <ul id="coll-media-type-ul">
-                                <li><input type="radio" id="check-1" name="radCollDest" >Internal</li>
-                                <li><input type="radio"  id="check-2" name="radCollDest" >External</li>
+                                <li><input type="radio"  name="radCollDest" value="Internal" >Internal</li>
+                                <li><input type="radio"  name="radCollDest" value="External" >External</li>
 
                             </ul> 
 
                         </div>  
 
                         <!--Destination Ends-->
+
+
+                         <div id="collanswer">
+		    <div class="blackText">&nbsp; &nbsp; Based on your selections we suggest using</div>
+			<ul id="coll-result">
+				
+                        </ul>
+		   </div>
+
+
                         <div>
 
                             <div class="button-block">
@@ -213,12 +220,20 @@
                         <div id="archDest">
                             <div id="arch-dest-block" class="green-text">Destination<span class="blackText"> (select one)*</span></div>
                             <ul id="arch-destination">
-                                <li><input type="radio" name="radArchDest" >Internal</li>
-                                <li><input type="radio" name="radArchDest" >External</li>
+                                <li><input type="radio" name="radArchDest" value="Internal" >Internal</li>
+                                <li><input type="radio" name="radArchDest" value="External" >External</li>
                             </ul> 
 
                         </div>  
-                        <!-- Hidden form to shown Destination Radio Buttons --> 
+                        <!-- Hidden form to shown Destination Radio Buttons -->
+
+
+                         <div id="archanswer">
+		    <div class="blackText">&nbsp; &nbsp; Based on your selections we suggest using</div>
+			<ul id="arch-result">
+				
+                        </ul>
+		   </div>
 
                         <div class="button-block">
                             <input id="archive-submit" type="button" value="Submit" class="update-button">
