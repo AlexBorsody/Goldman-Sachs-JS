@@ -221,27 +221,32 @@
 
                             }
 
-                            /* Special Requirement */
-                            var special_requirement=false;
+                           /* Special Requirement */
+                            var special_requirement=true;
 
                             if(selectedAnswers['207958']!=undefined){
-                           if(jObj['links'][j]['selections']['207958']!=undefined){
-                               special_requirement=true;
+                           if(jObj['links'][j]['selections']['207958']!="Yes"){
+                               special_requirement=false;
                             }
                             }
 
                             else if(selectedAnswers['207959']!=undefined){
-                                 if(jObj['links'][j]['selections']['207959']!=undefined){
-                               special_requirement=true;
+                                 if(jObj['links'][j]['selections']['207959']!="Yes"){
+                               special_requirement=false;
                             }
                             }
 
                            else if(selectedAnswers['207960']!=undefined){
-                                if(jObj['links'][j]['selections']['207960']!=undefined){
-                               special_requirement=true;
+                                if(jObj['links'][j]['selections']['207960']!="Yes"){
+                               special_requirement=false;
                             }
                             }
-                          
+                            
+                            // If special requirement is not chosen..skip all the answers arrays which have answer "YES" fro special requirement 
+                          if((selectedAnswers['207960']==undefined && selectedAnswers['207959']==undefined &&selectedAnswers['207958']==undefined)&&(
+                          jObj['links'][j]['selections']['207960']=="Yes" ||jObj['links'][j]['selections']['207959']=="Yes"|| jObj['links'][j]['selections']['207958']=="Yes")){
+                             special_requirement=false; 
+                          }
                          
                       /*    document.write(selectedAnswers["208163"]+"=="+jObj['links'][j]['selections']['208163']+"------"
                                +selectedAnswers["208164"]+"=="+jObj['links'][j]['selections']['208164']+"----"
@@ -288,7 +293,7 @@
                         if(flag){
                             $("ul#send-receive-result").html(recommended_products+alternate_products);
                         }else{
-                            $("ul#send-receive-result").html("No suggestion available");
+                            $("ul#send-receive-result").html("For this special case, please contact the BIR Team");
                         }
 
 
@@ -358,7 +363,7 @@
                         $("ul#send-receive-result").html(recommended_products+alternate_products);
                     }else{
                          $("ul#send-receive-result").empty()
-                        $("ul#send-receive-result").html("No suggestion available");
+                        $("ul#send-receive-result").html("For this special case, please contact the BIR Team");
                     }
                         $("#answer").fadeIn('slow');
 			
@@ -476,15 +481,22 @@
                 }
 
 
-            //answer demonstration: fade in mock answer if questions selected
-
+   
+            
+            //Check if any answer found and update answer block
+                if(flag){
+                     $("ul#arch-result").empty()
+                    $("ul#arch-result").html(recommended_products+alternate_products);
+                }else{
+                     $("ul#arch-result").empty()
+                    $("ul#arch-result").html("For this special case, please contact the BIR Team");
+                }
+		
                 $("#archanswer").fadeIn('slow');
 
                     $(this).val('Update')
 
-
-
-                       
+     
                     }
                 }else{
                     //If Non Electronic is selected , Remove any previous highlight and change button  
@@ -537,7 +549,7 @@
                     $("ul#arch-result").html(recommended_products+alternate_products);
                 }else{
                      $("ul#arch-result").empty()
-                    $("ul#arch-result").html("No suggestion available");
+                    $("ul#arch-result").html("For this special case, please contact the BIR Team");
                 }
 		
                 $("#archanswer").fadeIn('slow');
@@ -621,7 +633,7 @@
                     $("ul#coll-result").html(recommended_products+alternate_products);
                 }else{
                      $("ul#coll-result").empty()
-                    $("ul#coll-result").html("No suggestion available");
+                    $("ul#coll-result").html("For this special case, please contact the BIR Team");
                 }
 
 
@@ -655,15 +667,48 @@
 })(jQuery);
 
 $("document").ready(function(){
-
-$(".button-block #reset").click(function(){
-		$("input:radio, input:checkbox").attr("checked", false);
+    
+    
+    function clearAll(){
+        $("input:radio, input:checkbox").attr("checked", false);
 	        $('#answer').hide();
 		$("#collanswer").hide();
 		$("#archanswer").hide();
+    }
+
+$(".button-block #reset").click(function(){
+	clearAll();	
 		
 		
 });
+$("#sr-reset").click(function(){
+    if($("#sr-left-checks").css("display")=="block"){
+		$("#sr-left-checks input[type=radio], #sr-right-checks input[type=radio]").attr("checked", false);
+	        $('#answer').hide();
+		$("#collanswer").hide();
+		$("#archanswer").hide();
+    }
+    else{
+     clearAll();	
+    }
+		
+});
+
+$("#arch-reset").click(function(){
+               if($("#archDest").css("display")=="block"){
+		$("#arch-destination input[type=radio]").attr("checked", false);
+	        $('#answer').hide();
+		$("#collanswer").hide();
+		$("#archanswer").hide();
+               }else{
+               clearAll();	
+                   
+               }
+		
+		
+});
+
+
 
 });
  
