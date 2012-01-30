@@ -12,7 +12,7 @@ var jObj = {
             "207957":["Recommended"],
             "208163":["Send / Receive"],
             "208164":["Electronic"],
-            "206838":["Email with or withouth attachment","Documents"]
+            "206838":["Email with or without attachments","Documents"]
             }
         },{
     "text":"ADOBE LIVECYCLE",

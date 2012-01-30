@@ -225,22 +225,35 @@
                             var special_requirement=false;
 
                             if(selectedAnswers['207958']!=undefined){
-                           if(jObj['links'][j]['selections']['207958']!==undefined){
+                           if(jObj['links'][j]['selections']['207958']!=undefined){
                                special_requirement=true;
                             }
                             }
 
                             else if(selectedAnswers['207959']!=undefined){
-                                 if(jObj['links'][j]['selections']['207959']!==undefined){
+                                 if(jObj['links'][j]['selections']['207959']!=undefined){
                                special_requirement=true;
                             }
                             }
 
                            else if(selectedAnswers['207960']!=undefined){
-                                if(jObj['links'][j]['selections']['207960']!==undefined){
+                                if(jObj['links'][j]['selections']['207960']!=undefined){
                                special_requirement=true;
                             }
                             }
+                          
+                         
+                      /*    document.write(selectedAnswers["208163"]+"=="+jObj['links'][j]['selections']['208163']+"------"
+                               +selectedAnswers["208164"]+"=="+jObj['links'][j]['selections']['208164']+"----"
+                                +selectedAnswers["206736"]+"=="+jObj['links'][j]['selections']['206736']+"----"
+                             +selectedAnswers["206738"]+"=="+jObj['links'][j]['selections']['206738']+"----"
+                          +recipient_answer+datatype_answer+special_requirement+"<br/>" 
+                      
+                     
+   )
+                         document.write(jObj['links'][j]['selections']['208163']==selectedAnswers["208163"]&&jObj['links'][j]['selections']['208164']==selectedAnswers["208164"]&&jObj['links'][j]['selections']['206736']==selectedAnswers["206736"]&& jObj['links'][j]['selections']['206738']==selectedAnswers["206738"]&&    
+                                    recipient_answer > -1 && datatype_answer > -1 && special_requirement) */
+                          
                           
                             //Have to check if value exist in json ..else it returns undefined , which will break the code 
                             
